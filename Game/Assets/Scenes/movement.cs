@@ -6,6 +6,8 @@ public class movement : MonoBehaviour
 {
     public Rigidbody2D self;
     public int speed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +25,6 @@ public class movement : MonoBehaviour
         {
             self.MovePosition(new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y));
         }
+
     }
 }
