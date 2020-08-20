@@ -6,17 +6,20 @@ public class button : MonoBehaviour
 {
     public int speed;
     public Rigidbody2D self;
+    public Animator buttonanim;
+    private void Start()
+    {
+        buttonanim = FindObjectOfType<Animator>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Invoke("die", 1);
-            while (true)
-            {
-                self.MovePosition(new Vector2(self.position.x+speed*Time.deltaTime,self.position.y));
-            }
+            Invoke("die", 2);
+            buttonanim.SetTrigger("pressed");
         }
     }
+
     private void die()
     {
         Destroy(self.gameObject);
