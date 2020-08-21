@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - table
+  - player
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: limbs
     uniqueID: 2462573363
+    locked: 0
+  - name: table
+    uniqueID: 961643003
     locked: 0

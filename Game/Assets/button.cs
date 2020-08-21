@@ -9,7 +9,7 @@ public class button : MonoBehaviour
     public Animator buttonanim;
     private void Start()
     {
-        buttonanim = FindObjectOfType<Animator>();
+        buttonanim = GameObject.Find("button_main").GetComponent<Animator>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
